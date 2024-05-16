@@ -42,9 +42,9 @@ const openRecipePopup = (meal) => {
     <h3>Ingredients<h3>
     <ul class="ingedientsList">${fetchIngredients(meal)}</ul>
 
-    <div>
+    <div class="recipeInstructions">
         <h3>Instructions: </h3>
-        <p class="instructions">${meal.strInstructions}</p>
+        <p >${meal.strInstructions}</p>
     </div>
 
     `
@@ -81,6 +81,11 @@ searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
     // console.log("Button Clicked");
     const searchInput = searchBox.value.trim();
+
+    if (!searchInput) {
+        recipeContainer.innerHTML = `<h2>Type the meal in the search box</h2>`
+        return;
+    }
     fetchRecipes(searchInput);
 });
 

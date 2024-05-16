@@ -147,10 +147,70 @@ form button[type="submit"]:hover,
 }
 
 
-/* .recipeName {} */
+.recipeName {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+}
+
+.ingedientsList l1 {
+    margin-top: 10px;
+    margin-left: -20px;
+
+}
+
+.recipeInstructions p {
+    line-height: 30px;
+    white-space: pre-line;
+}
+
+.recipeName,
+.ingedientsList,
+.recipeInstructions {
+    margin-bottom: 10px;
+}
+
+.recipe-close-btn {
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #f44336;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
 
+
+}
+
+.recipe-close-btn:hover {
+    background-color: #ff5c5c;
+}
+
+
+.recipe-details-content {
+    padding: 30px;
+
+}
+
+.recipe-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+.recipe-details::-webkit-scrollbar-thumb {
+    background: #b5b5ba;
+    border-radius: 16px;
+    --webkit-border-radius: 16px;
+}
 
 @media screen and(max-width:600px) {
     header nav {
